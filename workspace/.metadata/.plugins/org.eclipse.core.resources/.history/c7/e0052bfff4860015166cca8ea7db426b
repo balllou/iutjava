@@ -1,0 +1,28 @@
+package edu.iut.app;
+
+public class ApplicationInfoLog extends AbstractApplicationLog {
+
+	/** Ajouter un tableau ou profiter de l'héritage ? */
+	public ApplicationInfoLog() {
+		super();
+	}
+	
+	@Override
+	public void setMessage(String message) {
+		this.message = message;
+        super.fireMessage("[INFO]", this.message);
+	}
+	public IApplicationLogListener[] getapplicationLogListeners(){
+		 
+		 IApplicationLogListener[] tab = new IApplicationLogListener[this.listeners.size()];
+		 int i=0;
+		 for (IApplicationLogListener x : this.listeners){
+			 tab[i]=x;
+			 i++;
+		 }
+		 
+		 return tab;
+	 }
+
+	
+}
