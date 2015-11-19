@@ -37,9 +37,6 @@ public class CommandLineOption<ValueType> {
 	}
 	public void setOption(OptionType optionType, String key, String description, ValueType defaultValue) {
 		/* EX1 : Affecter les attributs */
-		this.optionType=optionType;
-		this.key=key;
-		this.defaultValue=defaultValue;
 	}
 	public  void setValue(ValueType value) {
 		this.value = value;
