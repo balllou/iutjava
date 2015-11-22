@@ -6,11 +6,11 @@ import java.io.File;
 
 public class CommandLineParser {
 	
-	protected HashMap<String, CommandLineOption /* EX1: option generique */> options;
+	protected HashMap<String, CommandLineOption > options; /* EX1: option generique */
 	protected ArrayList<String> parseErrors;
 		
 	public CommandLineParser() {
-		options = new HashMap<String, CommandLineOption<?> >();
+		options = new HashMap<String, CommandLineOption >();
 		parseErrors = new ArrayList<String>();
 	}
 	
@@ -26,6 +26,46 @@ public class CommandLineParser {
 			if (options.containsKey(keyValue[0])) {
 				switch (((CommandLineOption<?>)options.get(keyValue[0])).getOptionType()) {
 					case FILE:
+						CommandLineOption<File> fileOption = (CommandLineOption<File>)options.get(keyValue[0]);
+						if (keyValue.length == 2) {
+							fileOption.setValue(new File(keyValue[1]));
+						}
+						else {
+							parseErrors.add("Option should have a key and a value.");
+						}
+					case STRING:
+						CommandLineOption<File> fileOption = (CommandLineOption<File>)options.get(keyValue[0]);
+						if (keyValue.length == 2) {
+							fileOption.setValue(new File(keyValue[1]));
+						}
+						else {
+							parseErrors.add("Option should have a key and a value.");
+						}
+					case INTEGER:
+						CommandLineOption<File> fileOption = (CommandLineOption<File>)options.get(keyValue[0]);
+						if (keyValue.length == 2) {
+							fileOption.setValue(new File(keyValue[1]));
+						}
+						else {
+							parseErrors.add("Option should have a key and a value.");
+						}
+					case DOUBLE:
+						CommandLineOption<File> fileOption = (CommandLineOption<File>)options.get(keyValue[0]);
+						if (keyValue.length == 2) {
+							fileOption.setValue(new File(keyValue[1]));
+						}
+						else {
+							parseErrors.add("Option should have a key and a value.");
+						}
+					case NOVALUE:
+						CommandLineOption<File> fileOption = (CommandLineOption<File>)options.get(keyValue[0]);
+						if (keyValue.length == 2) {
+							fileOption.setValue(new File(keyValue[1]));
+						}
+						else {
+							parseErrors.add("Option should have a key and a value.");
+						}
+					case NONE:
 						CommandLineOption<File> fileOption = (CommandLineOption<File>)options.get(keyValue[0]);
 						if (keyValue.length == 2) {
 							fileOption.setValue(new File(keyValue[1]));
