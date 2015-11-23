@@ -9,11 +9,6 @@ public class ExamEvent {
 	
 	public ExamEvent(Date date, Person person, ArrayList<Person> jury,
 					Classroom classRoom, ArrayList<Document> document) {
-		examDate=date;
-		student=person;
-		this.jury=jury;
-		classroom=classRoom;
-		documents=document;
 		
 	}
 	
@@ -23,8 +18,6 @@ public class ExamEvent {
 	protected ArrayList<Person> jury;
 	protected Classroom classroom;
 	protected ArrayList<Document> documents;
-	
-	
 	public Date getExamDate() {
 		return examDate;
 	}

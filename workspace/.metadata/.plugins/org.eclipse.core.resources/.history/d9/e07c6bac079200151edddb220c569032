@@ -34,41 +34,41 @@ public class CommandLineParser {
 							parseErrors.add("Option should have a key and a value.");
 						}
 					case STRING:
-						CommandLineOption<File> fileOption1 = (CommandLineOption<File>)options.get(keyValue[0]);
+						CommandLineOption<File> fileOption = (CommandLineOption<File>)options.get(keyValue[0]);
 						if (keyValue.length == 2) {
-							fileOption1.setValue(new File(keyValue[1]));
+							fileOption.setValue(new File(keyValue[1]));
 						}
 						else {
 							parseErrors.add("Option should have a key and a value.");
 						}
 					case INTEGER:
-						CommandLineOption<File> fileOption2 = (CommandLineOption<File>)options.get(keyValue[0]);
+						CommandLineOption<File> fileOption = (CommandLineOption<File>)options.get(keyValue[0]);
 						if (keyValue.length == 2) {
-							fileOption2.setValue(new File(keyValue[1]));
+							fileOption.setValue(new File(keyValue[1]));
 						}
 						else {
 							parseErrors.add("Option should have a key and a value.");
 						}
 					case DOUBLE:
-						CommandLineOption<File> fileOption3 = (CommandLineOption<File>)options.get(keyValue[0]);
+						CommandLineOption<File> fileOption = (CommandLineOption<File>)options.get(keyValue[0]);
 						if (keyValue.length == 2) {
-							fileOption3.setValue(new File(keyValue[1]));
+							fileOption.setValue(new File(keyValue[1]));
 						}
 						else {
 							parseErrors.add("Option should have a key and a value.");
 						}
 					case NOVALUE:
-						CommandLineOption<File> fileOption4 = (CommandLineOption<File>)options.get(keyValue[0]);
+						CommandLineOption<File> fileOption = (CommandLineOption<File>)options.get(keyValue[0]);
 						if (keyValue.length == 2) {
-							fileOption4.setValue(new File(keyValue[1]));
+							fileOption.setValue(new File(keyValue[1]));
 						}
 						else {
 							parseErrors.add("Option should have a key and a value.");
 						}
 					case NONE:
-						CommandLineOption<File> fileOption5 = (CommandLineOption<File>)options.get(keyValue[0]);
+						CommandLineOption<File> fileOption = (CommandLineOption<File>)options.get(keyValue[0]);
 						if (keyValue.length == 2) {
-							fileOption5.setValue(new File(keyValue[1]));
+							fileOption.setValue(new File(keyValue[1]));
 						}
 						else {
 							parseErrors.add("Option should have a key and a value.");
