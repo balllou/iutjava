@@ -1,0 +1,14 @@
+package edu.iut.app;
+
+import java.sql.Date;
+import java.util.LinkedList;
+
+public class CritereDate implements Critere{
+
+	@Override
+	public LinkedList<ExamEvent> meetCriteria(LinkedList<ExamEvent> events,Date date) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

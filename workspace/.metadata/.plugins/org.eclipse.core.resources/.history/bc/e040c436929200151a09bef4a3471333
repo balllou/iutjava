@@ -1,0 +1,14 @@
+package edu.iut.app;
+
+import java.util.LinkedList;
+
+public class CritereStudent {
+	LinkedList<Person> femalePersons = new LinkedList<Person>(); 
+    
+    for (Person person : persons) {
+       if(person.toString().equalsIgnoreCase("STUDENT")){
+          femalePersons.add(person);
+       }
+    }
+    return femalePersons;
+}
