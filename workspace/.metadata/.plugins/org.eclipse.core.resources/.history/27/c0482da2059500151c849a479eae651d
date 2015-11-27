@@ -8,12 +8,12 @@ public class CritereStudent implements Critere{
 	
 	@Override
 	public LinkedList<ExamEvent> meetCriteria(LinkedList<ExamEvent> events) {
-		for (ExamEvent E : events) {
-			if(E.toString().equalsIgnoreCase("STUDENT")){
-				etudiants.add(E);
+		for (Person person : persons) {
+			if(person.toString().equalsIgnoreCase("STUDENT")){
+				etudiants.add(person);
 			}
+			return etudiants;
 		}
-		return etudiants;
 	}
 
 }
