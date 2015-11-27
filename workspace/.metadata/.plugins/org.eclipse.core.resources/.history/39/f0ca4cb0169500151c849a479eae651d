@@ -46,21 +46,15 @@ public class SchedulerFrame extends JFrame {
 		this.setContentPane(splitPane);
 		
 		JMenuBar menuBar = new JMenuBar();
-		JMenu menuFile;
-		JMenu menuEdit;
-		JMenu menuHelp;
+		JMenu menu;		
 		JMenuItem menuItem;
 		
 		/* File Menu */
 		/** EX4 : MENU : UTILISER L'AIDE FOURNIE DANS LE TP**/
 		
 		
-		menuHelp= new JMenu("Help");
-		menuEdit = new JMenu("Edit");
-		menuFile = new JMenu("File");
-		menuBar.add(menuFile);
-		menuBar.add(menuEdit);
-		menuBar.add(menuHelp);
+		menu = new JMenu("File");
+		menuBar.add(menu);
 		
 		this.setJMenuBar(menuBar);
 		this.pack();
