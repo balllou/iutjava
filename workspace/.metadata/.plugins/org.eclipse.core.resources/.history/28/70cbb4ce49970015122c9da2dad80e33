@@ -55,10 +55,6 @@ public class SchedulerFrame extends JFrame {
 		
 		
 		menu= new JMenu("Help");
-		menuItem = new JMenuItem("Display");
-		menu.add(menuItem);
-		menuItem = new JMenuItem("About");
-		menu.add(menuItem);
 		menuBar.add(menu);
 		
 		menu = new JMenu("Edit");

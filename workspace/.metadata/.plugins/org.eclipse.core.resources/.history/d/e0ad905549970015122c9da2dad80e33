@@ -47,7 +47,6 @@ public class SchedulerFrame extends JFrame {
 		
 		JMenuBar menuBar = new JMenuBar();
 		JMenu menu;
-		JMenu menu2;
 		JMenuItem menuItem;
 		
 		/* File Menu */
@@ -55,23 +54,9 @@ public class SchedulerFrame extends JFrame {
 		
 		
 		menu= new JMenu("Help");
-		menuItem = new JMenuItem("Display");
-		menu.add(menuItem);
-		menuItem = new JMenuItem("About");
-		menu.add(menuItem);
 		menuBar.add(menu);
-		
 		menu = new JMenu("Edit");
-		menu2 = new JMenu("View");
-		menuItem = new JMenuItem("Month");
-		menu2.add(menuItem);
-		menuItem = new JMenuItem("Week");
-		menu2.add(menuItem);
-		menuItem = new JMenuItem("Day");
-		menu2.add(menuItem);
-		menu.add(menu2);
 		menuBar.add(menu);
-		
 		menu = new JMenu("File");
 		menuItem = new JMenuItem("Load");
 		menu.add(menuItem);
