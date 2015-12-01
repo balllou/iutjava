@@ -14,6 +14,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JSplitPane;
 
+import edu.iut.gui.listeners.ListenerItem;
 import edu.iut.gui.widget.agenda.AgendaPanelFactory;
 import edu.iut.gui.widget.agenda.ControlAgendaViewPanel;
 import edu.iut.gui.widget.agenda.AgendaPanelFactory.ActiveView;
@@ -23,10 +24,23 @@ public class SchedulerFrame extends JFrame {
 	JPanel contentPane;
 	CardLayout layerLayout;
 	AgendaPanelFactory agendaPanelFactory;	
-	JPanel dayView;
-	JPanel weekView;
-	JPanel monthView;
+	public static JPanel dayView;
+	public static JPanel weekView;
+	public static JPanel monthView;
+	public static JMenu menu;
+	public static JMenu menu2;
+	public static JMenuItem month;
+	public static JMenuItem display;
+	public static JMenuItem about;
+	public static JMenuItem week;
+	public static JMenuItem day;
+	public static JMenuItem load;
+	public static JMenuItem save;
+	public static JMenuItem quit;
 	
+	/**
+	 * crée le fenetre
+	 */
 	protected void setupUI() {
 		
 		contentPane = new JPanel();
@@ -46,39 +60,44 @@ public class SchedulerFrame extends JFrame {
 		this.setContentPane(splitPane);
 		
 		JMenuBar menuBar = new JMenuBar();
-		JMenu menu;
-		JMenu menu2;
-		JMenuItem menuItem;
+		
 		
 		/* File Menu */
 		/** EX4 : MENU : UTILISER L'AIDE FOURNIE DANS LE TP**/
 		
+		//actionlisteners
 		
+		
+		
+		// menu Help
 		menu= new JMenu("Help");
-		menuItem = new JMenuItem("Display");
-		menu.add(menuItem);
-		menuItem = new JMenuItem("About");
-		menu.add(menuItem);
+		display = new JMenuItem("Display");
+		menu.add(display);
+		about = new JMenuItem("About");
+		menu.add(about);
 		menuBar.add(menu);
-		
+		//menu Edit
 		menu = new JMenu("Edit");
 		menu2 = new JMenu("View");
-		menuItem = new JMenuItem("Month");
-		menu2.add(menuItem);
-		menuItem = new JMenuItem("Week");
-		menu2.add(menuItem);
-		menuItem = new JMenuItem("Day");
-		menu2.add(menuItem);
+		month = new JMenuItem("Month");
+		month.addActionListener(new ListenerItem());
+		menu2.add(month);
+		week = new JMenuItem("Week");
+		week.addActionListener(new ListenerItem());
+		menu2.add(week);
+		day = new JMenuItem("Day");
+		day.addActionListener(new ListenerItem());
+		menu2.add(day);
 		menu.add(menu2);
 		menuBar.add(menu);
-		
+		//menu File
 		menu = new JMenu("File");
-		menuItem = new JMenuItem("Load");
-		menu.add(menuItem);
-		menuItem = new JMenuItem("Save");
-		menu.add(menuItem);
-		menuItem = new JMenuItem("Quit");
-		menu.add(menuItem);
+		load = new JMenuItem("Load");
+		menu.add(load);
+		save = new JMenuItem("Save");
+		menu.add(save);
+		quit = new JMenuItem("Quit");
+		menu.add(quit);
 		menuBar.add(menu);
 		
 		
@@ -86,7 +105,9 @@ public class SchedulerFrame extends JFrame {
 		this.pack();
 		layerLayout.next(contentPane);
 	}
-	
+	/**
+	 * constructeur
+	 */
 	public SchedulerFrame() {
 		super();
 		
@@ -103,6 +124,10 @@ public class SchedulerFrame extends JFrame {
 		setupUI();
 
 	}
+	/**
+	 * constructeur avec titre de la fenetre
+	 * @param title
+	 */
 	public SchedulerFrame(String title) {
 		super(title);
 		addWindowListener (new WindowAdapter(){

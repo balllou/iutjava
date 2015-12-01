@@ -1,0 +1,18 @@
+package edu.iut.gui.listeners;
+
+
+import java.awt.event.MouseListener;
+
+import edu.iut.gui.frames.SchedulerFrame;
+
+public class ListenerMenu implements MouseListener{
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		// TODO Auto-generated method stub
+		
+		SchedulerFrame.monthView.setVisible(true);
+		
+	}
+
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="private" author="true" classpath="." destdir="Z:\iutjava\train\doc" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="edu.iut.app,edu.iut.gui.listeners,edu.iut.tools,edu.iut.exceptions,edu.iut.gui.frames,edu.iut.gui.widget.agenda" source="1.8" sourcepath="src" splitindex="true" use="true" version="true"/>
+    </target>
+</project>
