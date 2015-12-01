@@ -7,9 +7,6 @@ import edu.iut.gui.frames.SchedulerFrame;
 
 public class ListenerItem implements ActionListener{
 
-	/**
-	 * permet de changer de vue en fonction du bouton du menu selectionne
-	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub

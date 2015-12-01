@@ -39,7 +39,7 @@ public class SchedulerFrame extends JFrame {
 	public static JMenuItem quit;
 	
 	/**
-	 * crée la fenetre qui contient l'agenda et le menu
+	 * crée le fenetre
 	 */
 	protected void setupUI() {
 		
@@ -125,7 +125,7 @@ public class SchedulerFrame extends JFrame {
 
 	}
 	/**
-	 * constructeur avec titre de la fenetre en parametre
+	 * constructeur avec titre de la fenetre
 	 * @param title
 	 */
 	public SchedulerFrame(String title) {
