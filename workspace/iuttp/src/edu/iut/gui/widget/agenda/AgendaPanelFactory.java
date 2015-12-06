@@ -22,14 +22,24 @@ public class AgendaPanelFactory {
 			this.activeView = activeView;
 		}
 		
+		/**
+		 * retourne la vue active
+		 */
 		public String toString() {
 			return activeView;
 		}		
 	}
 	
+	/**
+	 * constructeur
+	 */
 	public AgendaPanelFactory() {
 	}
-	
+	/**
+	 * changela vue en fonction de la vue active	 
+	 * * @param activeView
+	 * @return
+	 */
 	public JPanel getAgendaView(ActiveView activeView) {
 		JPanel agendaView = null;
 		switch (activeView) {

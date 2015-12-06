@@ -12,6 +12,9 @@ import edu.iut.gui.widget.agenda.WeekPanel.WeekDayNames;
 
 public class MonthPanel extends EventPanel {
 
+	/**
+	 * constructeur
+	 */
 	public MonthPanel() {
 		super(ActiveView.MONTH_VIEW);
 		GridLayout daysOfMonthLayout = new GridLayout(7,5);		

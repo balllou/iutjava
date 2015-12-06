@@ -5,7 +5,9 @@ public class ApplicationErrorLog extends AbstractApplicationLog {
 	public ApplicationErrorLog() {
 		super();
 	}
-	
+	/**
+	 * définit le message avec la valeur passée en parametre
+	 */
 	@Override
 	public void setMessage(String message) {
 		this.message = message;

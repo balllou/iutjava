@@ -4,6 +4,9 @@ import java.util.LinkedList;
 
 public class CritereSalle implements Critere{
 
+	/**
+	 * retourne une LinkedList des salles d'un event
+	 */
 	LinkedList<ExamEvent> salles = new LinkedList<ExamEvent>();
 	public LinkedList<ExamEvent> meetCriteria(LinkedList<ExamEvent> events,String numSalle) {
 		for (ExamEvent E : events) {

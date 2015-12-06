@@ -11,6 +11,11 @@ import edu.iut.gui.widget.agenda.WeekPanel.WeekDayNames;
 
 public class DayPanel extends EventPanel {
 
+	/**
+	 * constructeur avec parametres
+	 * @param activeView
+	 * @param weekDayNames
+	 */
 	public DayPanel(ActiveView activeView,WeekDayNames weekDayNames) {
 		super(activeView);
 		switch (activeView) {

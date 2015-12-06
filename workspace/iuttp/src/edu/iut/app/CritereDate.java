@@ -5,7 +5,12 @@ import java.util.LinkedList;
 
 public class CritereDate implements Critere{
 
-	
+	/**
+	 * retourne une LinkedList d'events correspondant à la date passée en parametres
+	 * @param events
+	 * @param date
+	 * @return
+	 */
 	public LinkedList<ExamEvent> meetCriteria(LinkedList<ExamEvent> events,Date date) {
 		LinkedList<ExamEvent> eventDate = new LinkedList<ExamEvent>(); 
 	      

@@ -25,6 +25,11 @@ public class ControlAgendaViewPanel extends JPanel {
 	int selectedMonth;
 	int selectedDay;
 	
+	/**
+	 * constructeur
+	 * @param layerLayout
+	 * @param contentPane
+	 */
 	public ControlAgendaViewPanel(CardLayout layerLayout, final JPanel contentPane) {
 
 		this.agendaViewLayout = layerLayout;
@@ -32,12 +37,24 @@ public class ControlAgendaViewPanel extends JPanel {
 		/** EX3: REMPLACEMENT DU BOUTON NEXT */
 	}
 	
+	/**
+	 * retourne l'année selectionnée
+	 * @return
+	 */
 	public int getYear() {
 		return selectedYear;
 	}
+	/**
+	 * retourne le mois selectionné
+	 * @return
+	 */
 	public int getMonth() {
 		return selectedMonth;
 	}
+	/**
+	 * retourne le jour selectionné
+	 * @return
+	 */
 	public int getDay() {
 		return selectedDay;
 	}

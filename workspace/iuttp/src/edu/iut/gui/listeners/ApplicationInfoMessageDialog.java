@@ -5,6 +5,9 @@ import javax.swing.JOptionPane;
 public class ApplicationInfoMessageDialog extends
 		AbstractApplicationMessageDialog {
 
+	/**
+	 * affiche un message d'information
+	 */
 	@Override
 	protected void showMessage(String level, String message) {
 		JOptionPane.showMessageDialog(null, message, level, JOptionPane.INFORMATION_MESSAGE, null);

@@ -6,6 +6,9 @@ public class CritereNone implements Critere{
 	
 	LinkedList<ExamEvent> none = new LinkedList<ExamEvent>();
 	
+	/**
+	 * retourne une LinkedList de personnes non définies d'un event
+	 */
 	@Override
 	public LinkedList<ExamEvent> meetCriteria(LinkedList<ExamEvent> events) {
 		for (ExamEvent E : events) {

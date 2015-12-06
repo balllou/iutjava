@@ -8,18 +8,26 @@ public class CommandLineParser {
 	
 	protected HashMap<String, CommandLineOption > options; /* EX1: option generique */
 	protected ArrayList<String> parseErrors;
-		
+		/**
+		 * constructeur
+		 */
 	public CommandLineParser() {
 		options = new HashMap<String, CommandLineOption >();
 		parseErrors = new ArrayList<String>();
 	}
-	
+	/**
+	 * constructeur avec parametres
+	 * @param option
+	 */
 	public void addOption(CommandLineOption<?> option) {
 		if (option != null) {
 			options.put(option.getKey(),option);
 		}
 	}
-	
+	/**
+	 * change les options
+	 * @param args
+	 */
 	public void parse(String[] args) {
 		for (String argument: args) {
 			String[] keyValue=argument.split("=");
@@ -82,14 +90,21 @@ public class CommandLineParser {
 			}
 		}
 	}
-	
+	/**
+	 * retourne la valeur key de l'option
+	 * @param key
+	 * @return
+	 */
 	public CommandLineOption<?> getOption(String key) {
 		if (options.containsKey(key)) {
 			return options.get(key);
 		}
 		return null;
 	}
-	
+	/**
+	 * retourne une arrayList de String
+	 * @return
+	 */
 	public ArrayList<String> getErrors() {
 		return parseErrors;
 	}

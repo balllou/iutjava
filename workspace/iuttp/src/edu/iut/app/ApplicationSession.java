@@ -16,6 +16,9 @@ public class ApplicationSession {
 
 
 	private static ApplicationSession session = null;
+	/**
+	 * constructeur
+	 */
 	private ApplicationSession() {
 		locale = Locale.getDefault();
 		resourceBundle = ResourceBundle.getBundle("edu.iut.resources.strings.res");
@@ -38,34 +41,60 @@ public class ApplicationSession {
 		
 	}
 	
-	
+	/**
+	 * crée une instance de session si ce n'est pas déja fait
+	 * @return
+	 */
 	static public ApplicationSession instance() {
 		if (session == null) {			
 			session = new ApplicationSession();
 		}
 		return session;
 	}
-	
+	/**
+	 * retoune sessionGuiLogger
+	 * @return
+	 */
 	public Logger getGUILogger() {
 		return sessionGuiLogger;
 	}
+	/**
+	 * retourne sessionExceptionLogger
+	 * @return
+	 */
 	public Logger getExceptionLogger() {
 		return sessionExceptionLogger;
 	}
-	
+	/**
+	 * change la langue
+	 * @param locale
+	 */
 	public void setLocale(Locale locale){
 		this.locale = locale;
 		Locale.setDefault(this.locale);
 		resourceBundle=ResourceBundle.getBundle("edu.iut.resources.strings.res");
 	}
 	
+	/**
+	 * retourne la valeur de resourceBundle
+	 * @param key
+	 * @return
+	 */
 	public String getString(String key) {
 		return resourceBundle.getString(key);
 	}
 	
+	/**
+	 * retourne la valeur de days
+	 * @return
+	 */
 	public String[] getDays() {
 		return days;
 	}
+	/**
+	 * retourne la valeur de month
+	 * @return
+	 */
 	public String[] getMonths() {
 		return months;
 	}

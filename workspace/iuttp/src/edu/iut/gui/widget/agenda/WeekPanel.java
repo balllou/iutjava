@@ -22,20 +22,32 @@ public class WeekPanel extends EventPanel {
 		private String name;
 		private String shortName;
 		
+		/**
+		 * définit le nom long et court pour un jour de la semaine
+		 * @param name
+		 * @param shortName
+		 */
 		WeekDayNames(String name,String shortName) {
 			this.name = name;
 			this.shortName = shortName;
 		}
-		
+		/**
+		 * retourne le nom court du jour passé en parametres
+		 * @return
+		 */
 		public String getShortName() {
 			return shortName;
 		}
-		
+		/**
+		 * retourne le nom long du jour passé en parametres
+		 */
 		public String toString() {
 			return name;
 		}
 	}
-	
+	/**
+	 * constructeur
+	 */
 	public WeekPanel() {
 		super(ActiveView.WEEK_VIEW);
 		GridLayout daysOfWeekLayout = new GridLayout(1,7);		
